@@ -1,7 +1,6 @@
 module.exports.location = {
   host : 'localhost',
-  user : process.env.user,
-  password : process.env.password,
+  user : 'postgres',
   database : 'recipe'
 };
  
@@ -10,6 +9,6 @@ module.exports.production = {
   connection: process.env.DATABASE_URL + '?ssl=true',
 }
 
+module.exports.environment = 'development';
 
-module.exports.environment = 'production'
   //Used in database/db.js to determine with part of knexfile.js to use
