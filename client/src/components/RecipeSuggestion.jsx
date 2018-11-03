@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Header, Search } from 'semantic-ui-react';
 import axios from 'axios';
 import recipeSeed from '../../../seed_data/suggestion.js';
+import config from '../../../config.js';
 
 // refactor to functional component?
 class RecipeSuggestion extends React.Component {
@@ -26,8 +27,8 @@ class RecipeSuggestion extends React.Component {
       method: 'get',
       url: 'https://api.edamam.com/search',
       params: {
-        app_id: '988c2ac9',
-        app_key: '2f380c0898c8695e1bceb81f0bdae7df',
+        app_id: config.app_id,
+        app_key: config.app_key,
         q: this.state.search
       }
     }
